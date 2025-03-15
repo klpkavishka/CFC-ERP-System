@@ -6,6 +6,12 @@ import Inventory from './pages/Inventory';
 import Orders from './pages/Orders';
 import Fleet from './pages/Fleet';
 import Sourcing from './pages/Sourcing';
+import Finance from './pages/Finance';
+import Manufacturing from './pages/Manufacturing';
+import Communication from './pages/Communication';
+import Marketing from './pages/Marketing';
+import Projects from './pages/Projects';
+import HR from './pages/HR';
 
 function App() {
   return (
@@ -19,6 +25,12 @@ function App() {
             <Route path="/orders" element={<Orders />} />
             <Route path="/fleet" element={<Fleet />} />
             <Route path="/sourcing" element={<Sourcing />} />
+            <Route path="/finance" element={<Finance />} />
+            <Route path="/manufacturing" element={<Manufacturing />} />
+            <Route path="/communication" element={<Communication />} />
+            <Route path="/marketing" element={<Marketing />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/hr" element={<HR />} />
           </Routes>
         </div>
       </div>
@@ -26,5 +38,4 @@ function App() {
   );
 }
 
-// man pawan
 export default App;

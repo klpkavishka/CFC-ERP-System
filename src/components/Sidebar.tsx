@@ -6,12 +6,18 @@ import {
   ShoppingCart, 
   Truck, 
   Users,
-  Fish
+  Fish,
+  DollarSign,
+  Factory,
+  MessageSquare,
+  Target,
+  Briefcase,
+  ClipboardList
 } from 'lucide-react';
 
 const Sidebar = () => {
   return (
-    <div className="w-64 h-screen bg-blue-800 text-white p-4">
+    <div className="w-64 h-screen bg-blue-800 text-white p-4 overflow-y-auto">
       <div className="flex items-center gap-2 mb-8">
         <Fish className="w-8 h-8" />
         <h1 className="text-xl font-bold">CFC ERP System</h1>
@@ -76,6 +82,80 @@ const Sidebar = () => {
         >
           <Users className="w-5 h-5" />
           Direct Sourcing
+        </NavLink>
+
+        <div className="border-t border-blue-700 my-4"></div>
+
+        <NavLink
+          to="/finance"
+          className={({ isActive }) =>
+            `flex items-center gap-2 p-2 rounded-lg hover:bg-blue-700 transition-colors ${
+              isActive ? 'bg-blue-700' : ''
+            }`
+          }
+        >
+          <DollarSign className="w-5 h-5" />
+          Finance
+        </NavLink>
+
+        <NavLink
+          to="/manufacturing"
+          className={({ isActive }) =>
+            `flex items-center gap-2 p-2 rounded-lg hover:bg-blue-700 transition-colors ${
+              isActive ? 'bg-blue-700' : ''
+            }`
+          }
+        >
+          <Factory className="w-5 h-5" />
+          Manufacturing
+        </NavLink>
+
+        <NavLink
+          to="/communication"
+          className={({ isActive }) =>
+            `flex items-center gap-2 p-2 rounded-lg hover:bg-blue-700 transition-colors ${
+              isActive ? 'bg-blue-700' : ''
+            }`
+          }
+        >
+          <MessageSquare className="w-5 h-5" />
+          Communication
+        </NavLink>
+
+        <NavLink
+          to="/marketing"
+          className={({ isActive }) =>
+            `flex items-center gap-2 p-2 rounded-lg hover:bg-blue-700 transition-colors ${
+              isActive ? 'bg-blue-700' : ''
+            }`
+          }
+        >
+          <Target className="w-5 h-5" />
+          Marketing
+        </NavLink>
+
+        <NavLink
+          to="/projects"
+          className={({ isActive }) =>
+            `flex items-center gap-2 p-2 rounded-lg hover:bg-blue-700 transition-colors ${
+              isActive ? 'bg-blue-700' : ''
+            }`
+          }
+        >
+          <ClipboardList className="w-5 h-5" />
+          Projects
+        </NavLink>
+
+        <NavLink
+          to="/hr"
+          className={({ isActive }) =>
+            `flex items-center gap-2 p-2 rounded-lg hover:bg-blue-700 transition-colors ${
+              isActive ? 'bg-blue-700' : ''
+            }`
+          }
+        >
+          <Briefcase className="w-5 h-5" />
+          HR Management
         </NavLink>
       </nav>
     </div>
